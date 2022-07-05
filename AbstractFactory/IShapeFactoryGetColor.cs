@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory
 {
-    public interface IShape
+    interface IShapeFactoryGetColor 
     {
-        void Generate();
+        IShapeFactory GetFactoryShape(string Color);
+
     }
 }

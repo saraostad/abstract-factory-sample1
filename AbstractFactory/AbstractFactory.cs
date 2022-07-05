@@ -6,18 +6,24 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory
 {
-    internal class AbstractFactory : IAbstractFactory
+    internal class AbstractFactory : IShapeFactoryGetColor
     {
-        public IColor GetColor(Colors colorType)
+        public IShapeFactory GetFactoryShape (string shapeColor)
         {
-            var colorFactory = new ColorFactory();
-            return colorFactory.GetColor(colorType);
-        }
-
-        public IShape GetShape(Shapes shapeType)
-        {
-            var shapeFactory = new ShapeFactory();
-            return shapeFactory.GetShape(shapeType);
+            switch (shapeColor)
+            {
+                case "Blue":
+                    {
+                        return new BlueShapeFactory();
+                    }
+                case "Red":
+                    {
+                        return new RedShapeFactory();
+                    }
+                default:
+                    return null;
+            }
+            
         }
     }
 }

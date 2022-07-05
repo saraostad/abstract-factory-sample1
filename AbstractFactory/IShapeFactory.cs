@@ -8,6 +8,6 @@ namespace AbstractFactory
 {
     interface IShapeFactory
     {
-        IShape GetShape(Shapes shapeType);
+        IShape CreateShape(string shapeName);
     }
 }

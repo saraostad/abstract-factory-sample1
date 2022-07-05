@@ -43,6 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory.cs" />
+    <Compile Include="RedCircle.cs" />
+    <Compile Include="BlueCircle.cs" />
+    <Compile Include="RedRectangle.cs" />
+    <Compile Include="BlueRectangle.cs" />
+    <Compile Include="RedShapeFactory.cs" />
+    <Compile Include="BlueShapeFactory.cs" />
+    <Compile Include="IShape.cs" />
+    <Compile Include="IShapeFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

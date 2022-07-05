@@ -8,16 +8,16 @@ namespace AbstractFactory
 {
     class ShapeFactory : IShapeFactory
     {
-        public IShape GetShape(Shapes shapeType)
+        public IShape CreateShape(string shapeType)
         {
 
             switch (shapeType)
             {
-                case Shapes.RECTANGLE:
-                    return new Rectangle();
-                case Shapes.SQUARE:
+                case "RectangleBlue":
+                    return new BlueRectangle();
+                case "SQUARE":
                     return new Square();
-                case Shapes.CIRCLE:
+                case "CIRCLE":
                     return new Circle();
                 default:
                     return null;
